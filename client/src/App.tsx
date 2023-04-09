@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form'
 import type { App } from '../../elysia/types'
 import ChatComponent from './components/chat'
 
-const api = edenTreaty<App>('http://localhost:3000')
+const api = edenTreaty<App>('https://elysia-server-production.up.railway.app/')
 
 const ApiContext = createContext(api)
 export const useApi = () => useContext(ApiContext)
