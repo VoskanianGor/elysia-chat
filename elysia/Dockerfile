@@ -1,30 +1,16 @@
-FROM debian:11.6-slim as builder
+# Use the offical Bun image
+FROM jarredsumner/bun:edge
 
-WORKDIR /app
+# Set the Docker working directory as /usr/src/app
+# Copy everything from here into Docker's /usr/src/app
+WORKDIR /usr/src/app
+COPY . /usr/src/app
 
-RUN apt update
-RUN apt install curl unzip -y
+# Install the dependencies (Bao.js)
+RUN bun install
 
-RUN curl https://bun.sh/install | bash
-
-COPY package.json .
-COPY bun.lockb .
-
-RUN /root/.bun/bin/bun install --production
-
-# ? -------------------------
-FROM gcr.io/distroless/base
-
-WORKDIR /app
-
-COPY --from=builder /root/.bun/bin/bun bun
-COPY --from=builder /app/node_modules node_modules
-
-COPY src src
-# COPY public public
-# COPY tsconfig.json .
-
-ENV ENV production
-CMD ["./bun", "src/index.ts"]
-
+# The port that Bao.js will listen on
 EXPOSE 3000
+
+# Run the Bao.js webserver
+CMD bun run src/index.ts
