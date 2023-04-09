@@ -74,3 +74,15 @@ button:hover {
 button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
 }
+
+@media screen and (max-width: 500px) {
+	.chat-container {
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.message-display {
+		max-height: 100vh;
+		height: 100%;
+	}
+}
