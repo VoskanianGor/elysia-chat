@@ -9,7 +9,7 @@ import type { App } from '../../elysia/types'
 import ChatComponent from './components/chat'
 
 // test
-const api = edenTreaty<App>('https://elysia-server-production.up.railway.app/')
+const api = edenTreaty<App>('https://waiting-drug-production.up.railway.app/')
 
 const ApiContext = createContext(api)
 export const useApi = () => useContext(ApiContext)
