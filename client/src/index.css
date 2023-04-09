@@ -1,0 +1,76 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+:root {
+	font-family: SF Pro Display, Inter, system-ui, Avenir, Helvetica, Arial,
+		sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
+	font-family: 'SF Pro Display', sans-serif;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+form {
+	display: flex;
+	padding: 8px;
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+}
+
+input {
+	flex-grow: 1;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	outline: none;
+	margin-right: 8px;
+}
+
+button {
+	padding: 8px 16px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}

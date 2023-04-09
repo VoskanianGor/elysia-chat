@@ -1,0 +1,25 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.auth-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3px;
+	margin: auto;
+	border: none;
+
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.auth-form button {
+	margin-top: 10px;
+}
+
+.auth-form input {
+	margin: 0;
+}
